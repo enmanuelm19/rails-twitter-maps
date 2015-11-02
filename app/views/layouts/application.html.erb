@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsTwiterMaps</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+        <div class="nav-wrapper">
+          <%= link_to "Rails-Material-Twitter-Maps", root_path, class: 'brand-logo' %>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li> <%= link_to(videos_path) do %> <i class="mdi-action-view-list"></i> <% end %></li>
+            <li><%= link_to(pages_about_path) do %>
+            <i class="mdi-action-perm-identity"></i>
+            <% end %></li>
+            <li><%= link_to(pages_contact_path) do %>
+            <i class="mdi-maps-place"></i>
+            <% end %></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><%= link_to(pages_about_path) do %>
+            <i class="mdi-action-perm-identity"></i>
+            <% end %></li>
+            <li><%= link_to(pages_contact_path) do %>
+            <i class="mdi-maps-place"></i>
+            <% end %></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="row">
+            <div class="col m10 offset-m1">
+              <%= yield %>
+            </div>
+          </div>
+</body>
+</html>
