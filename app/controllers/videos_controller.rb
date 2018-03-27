@@ -6,6 +6,7 @@ class VideosController < ApplicationController
   end
 
   def show
+    @videos = Video.all
   end
 
   def new

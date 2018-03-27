@@ -11,7 +11,7 @@
     <li>
       <div class="collapsible-header">
         <i class="mdi-av-my-library-books"></i>
-        <%= link_to video.title,video %>
+        <%= link_to video.title,video, id: "video_#{video.id}" %>
         <span class="right">
           <%= link_to edit_video_path(video) do %>
             <i class="mdi-content-create"></i>

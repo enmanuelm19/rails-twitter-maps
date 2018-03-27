@@ -76,3 +76,15 @@
 ```
 
 Tienen que colocar en la ultima linea de codigo donde se hace el llamado a la API de maps la KEY que generaste anteriormente y **WUALAAAA** :boom: :sparkles:
+
+
+#### Para correr el aplicativo
+Para correr el aplicativo sin docker es necesario tener instalado ruby en tu coputador:
+
+* Sin Docker:
+  * bundle install
+  * rake db:create && rake db:migrate
+  * rails server
+
+* Con Docker:
+  * docker-compose up --build
